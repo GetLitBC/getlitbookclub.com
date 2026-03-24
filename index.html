@@ -10,7 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=3" />
   </head>
   <body>
     <div class="page-shell">
@@ -22,7 +22,7 @@
           </div>
           <p class="hero__lede">
             Track books, members, meetings, RSVPs, reading progress, and discussion
-            notes in one warm little corner of the internet. TEST MARKER
+            notes in one warm little corner of the internet.
           </p>
           <div class="hero__actions">
             <button class="button button--primary" data-scroll-target="#book-form">
@@ -224,10 +224,13 @@
 
     <template id="member-template">
       <article class="list-card">
-        <div>
-          <p class="list-card__eyebrow"></p>
-          <h3></h3>
-          <p class="list-card__meta"></p>
+        <div class="member-card__identity">
+          <div class="member-avatar" aria-hidden="true"></div>
+          <div>
+            <p class="list-card__eyebrow"></p>
+            <h3></h3>
+            <p class="list-card__meta"></p>
+          </div>
         </div>
         <div class="list-card__actions">
           <button class="button button--ghost" data-action="bump-progress">+10%</button>
@@ -257,6 +260,6 @@
       </article>
     </template>
 
-    <script src="./app.js"></script>
+    <script src="./app.js?v=3"></script>
   </body>
 </html>

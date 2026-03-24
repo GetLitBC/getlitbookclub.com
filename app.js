@@ -4,60 +4,240 @@ const sampleData = {
   books: [
     {
       id: crypto.randomUUID(),
-      title: "Tomorrow, and Tomorrow, and Tomorrow",
-      author: "Gabrielle Zevin",
-      genre: "Literary fiction",
+      title: "Plain Truth",
+      author: "Jodi Picoult",
+      genre: "Fiction",
       status: "current",
     },
     {
       id: crypto.randomUUID(),
-      title: "Kindred",
-      author: "Octavia E. Butler",
-      genre: "Speculative fiction",
+      title: "This Is How It Always Is: A Novel",
+      author: "Laurie Frankel",
+      genre: "Fiction",
       status: "up-next",
-      amazonUrl: "https://www.amazon.com/s?k=Kindred+Octavia+Butler",
+      amazonUrl: "https://www.amazon.com/dp/1250088569/?tag=bookclubz08-20",
+    },
+    {
+      id: crypto.randomUUID(),
+      title: "Playground: A Novel",
+      author: "Richard Powers",
+      genre: "Fiction",
+      status: "finished",
+    },
+    {
+      id: crypto.randomUUID(),
+      title: "Summer Island: A Novel",
+      author: "Kristin Hannah",
+      genre: "Fiction",
+      status: "finished",
+    },
+    {
+      id: crypto.randomUUID(),
+      title: "The Academy: A Novel (The Academy Series, 1)",
+      author: "Elin Hilderbrand and Shelby Cunningham",
+      genre: "Fiction",
+      status: "finished",
+    },
+    {
+      id: crypto.randomUUID(),
+      title: "Circe",
+      author: "Madeline Miller",
+      genre: "Fantasy",
+      status: "finished",
+    },
+    {
+      id: crypto.randomUUID(),
+      title: "Regretting You",
+      author: "Colleen Hoover",
+      genre: "Fiction",
+      status: "finished",
+    },
+    {
+      id: crypto.randomUUID(),
+      title: "All Fours: A Novel",
+      author: "Miranda July",
+      genre: "Fiction",
+      status: "finished",
+    },
+    {
+      id: crypto.randomUUID(),
+      title: "The Briar Club: A Thrilling and Powerful Story of Female Friendships and Secrets",
+      author: "Kate Quinn",
+      genre: "Historical fiction",
+      status: "finished",
+    },
+    {
+      id: crypto.randomUUID(),
+      title: "The God of the Woods: A Novel",
+      author: "Liz Moore",
+      genre: "Fiction",
+      status: "finished",
+    },
+    {
+      id: crypto.randomUUID(),
+      title: "We All Want Impossible Things: A Raucous Literary Celebration of Life, Love, and Friendship",
+      author: "Catherine Newman",
+      genre: "Fiction",
+      status: "finished",
+    },
+    {
+      id: crypto.randomUUID(),
+      title: "Remarkably Bright Creatures: A Novel",
+      author: "Shelby Van Pelt",
+      genre: "Fiction",
+      status: "finished",
+    },
+    {
+      id: crypto.randomUUID(),
+      title: "Eruption: Instant #1 New York Times Bestseller",
+      author: "James Patterson and Michael Crichton",
+      genre: "Thriller",
+      status: "finished",
+    },
+    {
+      id: crypto.randomUUID(),
+      title: "The Kitchen House",
+      author: "Kathleen Grissom",
+      genre: "Historical fiction",
+      status: "finished",
+    },
+    {
+      id: crypto.randomUUID(),
+      title: "Horse: A Novel",
+      author: "Geraldine Brooks",
+      genre: "Historical fiction",
+      status: "finished",
+    },
+    {
+      id: crypto.randomUUID(),
+      title: "The Women: A Novel",
+      author: "Kristin Hannah",
+      genre: "Historical fiction",
+      status: "finished",
+    },
+    {
+      id: crypto.randomUUID(),
+      title: "It Ends with Us: A Novel",
+      author: "Colleen Hoover",
+      genre: "Fiction",
+      status: "finished",
     },
   ],
   members: [
     {
       id: crypto.randomUUID(),
-      name: "Avery",
-      email: "avery@example.com",
-      progress: 80,
+      name: "Marti Harris",
+      email: "marti@martiharris.com",
+      progress: 0,
     },
     {
       id: crypto.randomUUID(),
-      name: "Micah",
-      email: "micah@example.com",
-      progress: 55,
+      name: "Andrea Cotner",
+      email: "boujani@gmail.com",
+      progress: 0,
     },
     {
       id: crypto.randomUUID(),
-      name: "Nora",
-      email: "nora@example.com",
-      progress: 95,
+      name: "Carolynne Mori",
+      email: "carojmc@gmail.com",
+      progress: 0,
+    },
+    {
+      id: crypto.randomUUID(),
+      name: "Erin Fitzgerald",
+      email: "emfitzgerald@geisinger.edu",
+      progress: 0,
+    },
+    {
+      id: crypto.randomUUID(),
+      name: "Gerrisa Strony",
+      email: "gerrisa22@gmail.com",
+      progress: 0,
+    },
+    {
+      id: crypto.randomUUID(),
+      name: "Gurprasad Mitchell",
+      email: "gurprasadkm@gmail.com",
+      progress: 0,
+    },
+    {
+      id: crypto.randomUUID(),
+      name: "Jenn Marks",
+      email: "jmarks1105@gmail.com",
+      progress: 0,
+    },
+    {
+      id: crypto.randomUUID(),
+      name: "Kate",
+      email: "katehafer@aol.com",
+      progress: 0,
+    },
+    {
+      id: crypto.randomUUID(),
+      name: "Kathy Dehart",
+      email: "kathy.dehart11@gmail.com",
+      progress: 0,
+    },
+    {
+      id: crypto.randomUUID(),
+      name: "Kendra Boell",
+      email: "kendraboell@gmail.com",
+      progress: 0,
+    },
+    {
+      id: crypto.randomUUID(),
+      name: "Michelle Moynan",
+      email: "chillmom70@gmail.com",
+      progress: 0,
+    },
+    {
+      id: crypto.randomUUID(),
+      name: "Molly Nied",
+      email: "nied.molly@gmail.com",
+      progress: 0,
+    },
+    {
+      id: crypto.randomUUID(),
+      name: "Morgan",
+      email: "zedmorgan@gmail.com",
+      progress: 0,
+    },
+    {
+      id: crypto.randomUUID(),
+      name: "Rebecca",
+      email: "blans5454@gmail.com",
+      progress: 0,
+    },
+    {
+      id: crypto.randomUUID(),
+      name: "Rona Hummel",
+      email: "hummelrf@gmail.com",
+      progress: 0,
+    },
+    {
+      id: crypto.randomUUID(),
+      name: "Rose Barham",
+      email: "rosebarham@gmail.com",
+      progress: 0,
+    },
+    {
+      id: crypto.randomUUID(),
+      name: "Sarah Marks",
+      email: "sarahjonesmarks@gmail.com",
+      progress: 0,
     },
   ],
   meetings: [
     {
       id: crypto.randomUUID(),
-      date: "2026-04-02",
-      time: "19:00",
-      host: "Rosa",
-      location: "123 Atlantic Ave, Brooklyn, NY",
+      date: "2026-05-31",
+      time: "18:00",
+      host: "Undecided",
+      location: "Milton",
       confirmed: true,
     },
   ],
-  notes: [
-    {
-      id: crypto.randomUUID(),
-      text: "Did the nonlinear timeline deepen the emotional payoff or make it feel more distant?",
-    },
-    {
-      id: crypto.randomUUID(),
-      text: "Bring two adaptation dream-casts for next meeting.",
-    },
-  ],
+  notes: [],
 };
 
 const appState = loadState();
@@ -155,6 +335,7 @@ function renderMembers() {
     emptyMessage: "Build your roster and keep track of everyone's pace.",
     decorate(item, clone) {
       clone.querySelector(".list-card").dataset.id = item.id;
+      clone.querySelector(".member-avatar").textContent = getInitials(item.name);
       clone.querySelector(".list-card__eyebrow").textContent = `${item.progress}% complete`;
       clone.querySelector("h3").textContent = item.name;
       clone.querySelector(".list-card__meta").textContent = item.email || "No email saved";
@@ -485,6 +666,15 @@ function appendBookTitle(container, book) {
   }
 
   container.textContent = book.title;
+}
+
+function getInitials(name) {
+  return name
+    .trim()
+    .split(/\s+/)
+    .slice(0, 2)
+    .map((part) => part[0]?.toUpperCase() || "")
+    .join("");
 }
 
 function createAppleMapsUrl(location) {
