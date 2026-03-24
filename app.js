@@ -8,6 +8,7 @@ const sampleData = {
       author: "Jodi Picoult",
       genre: "Fiction",
       status: "current",
+      amazonUrl: "https://www.amazon.com/s?k=Plain+Truth+Jodi+Picoult",
     },
     {
       id: crypto.randomUUID(),
@@ -230,10 +231,10 @@ const sampleData = {
   meetings: [
     {
       id: crypto.randomUUID(),
-      date: "2026-05-31",
+      date: "2026-04-26",
       time: "18:00",
-      host: "Undecided",
-      location: "Milton",
+      host: "Kathy Dehart",
+      location: "875 Mexico Road, Milton, PA",
       confirmed: true,
     },
   ],
