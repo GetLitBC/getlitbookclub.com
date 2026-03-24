@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GetLit Bookclub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css?v=4" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero__copy">
+          <div class="brand-lockup">
+            <img class="brand-logo" src="./Get.png" alt="GetLit Bookclub logo" />
+            <p class="eyebrow">GetLit Bookclub</p>
+          </div>
+          <p class="hero__lede">
+            Track books, members, meetings, RSVPs, reading progress, and discussion
+            notes in one warm little corner of the internet.
+          </p>
+          <div class="hero__actions">
+            <button class="button button--primary" data-scroll-target="#book-form">
+              Add the next pick
+            </button>
+            <button class="button button--secondary" id="reset-demo">
+              Restore sample data
+            </button>
+          </div>
+        </div>
+        <div class="hero__card card">
+          <p class="card__label">GetLit Spotlight</p>
+          <h2 id="spotlight-title">No meeting scheduled yet</h2>
+          <p id="spotlight-meta">Add a meeting to get your club calendar moving.</p>
+          <div class="hero__stats">
+            <div>
+              <span id="stat-members">0</span>
+              <p>Members</p>
+            </div>
+            <div>
+              <span id="stat-books">0</span>
+              <p>Books</p>
+            </div>
+            <div>
+              <span id="stat-progress">0%</span>
+              <p>Avg. progress</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="panel panel--wide">
+          <div class="panel__header">
+            <div>
+              <p class="eyebrow">Club Snapshot</p>
+              <h2>Everything at a glance</h2>
+            </div>
+          </div>
+          <div class="dashboard-grid">
+            <article class="metric card">
+              <p class="card__label">Current pick</p>
+              <h3 id="current-book-title">Choose a book to get started</h3>
+              <p id="current-book-meta">No active read selected.</p>
+            </article>
+            <article class="metric card">
+              <p class="card__label">Attendance outlook</p>
+              <h3 id="attendance-summary">0 confirmed</h3>
+              <p id="attendance-meta">RSVPs will show up here.</p>
+            </article>
+            <article class="metric card">
+              <p class="card__label">Up next</p>
+              <h3 id="up-next-title">Nothing queued yet</h3>
+              <div id="up-next-list" class="snapshot-list">
+                Add a few books with status set to Up next.
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel">
+          <div class="panel__header">
+            <div>
+              <p class="eyebrow">Bookshelf</p>
+              <h2>Reading list</h2>
+            </div>
+          </div>
+          <form class="stack-form" id="book-form">
+            <label>
+              <span>Title</span>
+              <input id="book-title" name="title" placeholder="The Left Hand of Darkness" required />
+            </label>
+            <label>
+              <span>Author</span>
+              <input id="book-author" name="author" placeholder="Ursula K. Le Guin" required />
+            </label>
+            <label>
+              <span>Genre</span>
+              <input id="book-genre" name="genre" placeholder="Science fiction" />
+            </label>
+            <label>
+              <span>Amazon link (optional)</span>
+              <input
+                id="book-amazon-url"
+                name="amazonUrl"
+                type="url"
+                placeholder="https://www.amazon.com/..."
+              />
+            </label>
+            <label>
+              <span>Status</span>
+              <select id="book-status" name="status">
+                <option value="up-next">Up next</option>
+                <option value="current">Current pick</option>
+                <option value="finished">Finished</option>
+              </select>
+            </label>
+            <button class="button button--primary" type="submit">Save book</button>
+          </form>
+          <div class="list" id="book-list"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel__header">
+            <div>
+              <p class="eyebrow">Members</p>
+              <h2>Club roster</h2>
+            </div>
+          </div>
+          <form class="stack-form" id="member-form">
+            <label>
+              <span>Name</span>
+              <input id="member-name" name="name" placeholder="Avery" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input id="member-email" name="email" placeholder="avery@example.com" type="email" />
+            </label>
+            <label>
+              <span>Reading progress (%)</span>
+              <input id="member-progress" name="progress" min="0" max="100" type="number" value="0" />
+            </label>
+            <button class="button button--primary" type="submit">Add member</button>
+          </form>
+          <div class="list" id="member-list"></div>
+        </section>
+
+        <section class="panel">
+          <div class="panel__header">
+            <div>
+              <p class="eyebrow">Meetings</p>
+              <h2>Calendar</h2>
+            </div>
+          </div>
+          <form class="stack-form" id="meeting-form">
+            <div class="form-row">
+              <label>
+                <span>Date</span>
+                <input id="meeting-date" name="date" type="date" required />
+              </label>
+              <label>
+                <span>Time</span>
+                <input id="meeting-time" name="time" type="time" required />
+              </label>
+            </div>
+            <label>
+              <span>Host</span>
+              <input id="meeting-host" name="host" placeholder="Jules" required />
+            </label>
+            <label>
+              <span>Location</span>
+              <input
+                id="meeting-location"
+                name="location"
+                placeholder="123 Main St, Brooklyn, NY"
+                required
+              />
+            </label>
+            <button class="button button--primary" type="submit">Schedule meeting</button>
+          </form>
+          <div class="list" id="meeting-list"></div>
+        </section>
+
+        <section class="panel panel--wide">
+          <div class="panel__header">
+            <div>
+              <p class="eyebrow">Discussion Board</p>
+              <h2>Notes and prompts</h2>
+            </div>
+          </div>
+          <form class="stack-form" id="note-form">
+            <label>
+              <span>Prompt or takeaway</span>
+              <textarea
+                id="note-text"
+                name="text"
+                rows="4"
+                placeholder="Which moment changed how you saw the main character?"
+                required
+              ></textarea>
+            </label>
+            <button class="button button--primary" type="submit">Save note</button>
+          </form>
+          <div class="notes-grid" id="note-list"></div>
+        </section>
+      </main>
+    </div>
+
+    <template id="book-template">
+      <article class="list-card">
+        <div>
+          <p class="list-card__eyebrow"></p>
+          <h3></h3>
+          <p class="list-card__meta"></p>
+        </div>
+        <button class="button button--ghost" data-action="delete-book">Remove</button>
+      </article>
+    </template>
+
+    <template id="member-template">
+      <article class="list-card">
+        <div class="member-card__identity">
+          <div class="member-avatar" aria-hidden="true"></div>
+          <div>
+            <p class="list-card__eyebrow"></p>
+            <h3></h3>
+            <p class="list-card__meta"></p>
+          </div>
+        </div>
+        <div class="list-card__actions">
+          <button class="button button--ghost" data-action="bump-progress">+10%</button>
+          <button class="button button--ghost" data-action="delete-member">Remove</button>
+        </div>
+      </article>
+    </template>
+
+    <template id="meeting-template">
+      <article class="list-card">
+        <div>
+          <p class="list-card__eyebrow"></p>
+          <h3></h3>
+          <p class="list-card__meta"></p>
+        </div>
+        <div class="list-card__actions">
+          <button class="button button--ghost" data-action="toggle-rsvp">Toggle RSVP</button>
+          <button class="button button--ghost" data-action="delete-meeting">Remove</button>
+        </div>
+      </article>
+    </template>
+
+    <template id="note-template">
+      <article class="note-card">
+        <p></p>
+        <button class="button button--ghost" data-action="delete-note">Delete</button>
+      </article>
+    </template>
+
+    <script src="./app.js?v=4"></script>
+  </body>
+</html>
